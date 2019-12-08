@@ -1,0 +1,9 @@
+﻿  SPPCalculator.cpp
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(1): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(2): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(4): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(5): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\владелец\desktop\sppcalculator\sppcalculator\sppcalculator.cpp(143): warning C4101: z: неиспользованная локальная переменная
+  SPPCalculator.vcxproj -> C:\Users\Владелец\Desktop\SPPCalculator\x64\Debug\SPPCalculator.exe

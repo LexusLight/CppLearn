@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  Huffman.cpp
+d:\github\cpplearn\huffman\huffman\huffman\huffman.cpp(22): warning C4018: <: несоответствие типов со знаком и без знака
+  Huffman.vcxproj -> D:\GitHub\CppLearn\Huffman\Huffman\Debug\Huffman.exe

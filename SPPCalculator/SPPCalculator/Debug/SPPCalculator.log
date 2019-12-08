@@ -1,0 +1,5 @@
+﻿  pch.cpp
+  SPPCalculator.cpp
+c:\users\владелец\source\repos\sppcalculator\sppcalculator\sppcalculator.cpp(2): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\source\repos\sppcalculator\sppcalculator\sppcalculator.cpp(4): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\владелец\source\repos\sppcalculator\sppcalculator\sppcalculator.cpp(20): error C3861: Add: идентификатор не найден
