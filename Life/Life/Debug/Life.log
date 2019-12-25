@@ -1,0 +1,3 @@
+﻿  Life.cpp
+d:\github\cpplearn\life\life\life.cpp(93): warning C4717: Field::CycleMap: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+  Life.vcxproj -> D:\GitHub\CppLearn\Life\Debug\Life.exe
