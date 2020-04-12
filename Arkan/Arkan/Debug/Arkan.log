@@ -1,0 +1,22 @@
+﻿  Ball.cpp
+d:\github\cpplearn\arkan\scripts\ball.cpp(17): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+d:\github\cpplearn\arkan\scripts\ball.cpp(18): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+d:\github\cpplearn\arkan\scripts\ball.cpp(23): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+d:\github\cpplearn\arkan\scripts\ball.cpp(67): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  Block.cpp
+  BlocksField.cpp
+  Game.cpp
+  GlobalObjects.cpp
+d:\github\cpplearn\arkan\scripts\globalobjects.cpp(6): warning C4244: аргумент: преобразование "const float" в "unsigned int", возможна потеря данных
+  Raketka.cpp
+  main.cpp
+  Создание кода...
+  Arkan.vcxproj -> D:\GitHub\CppLearn\Arkan\Debug\Arkan.exe
