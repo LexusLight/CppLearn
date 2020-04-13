@@ -13,8 +13,8 @@ private:
     Game() = delete;
 
 public:
-    static void createBall(const Ball & bll) { ball = new Ball(bll); }
-    static void createPaddle(const Raketka & padd) { paddle = new Raketka(padd); }
+    static void newBall(const Ball & bll) { ball = new Ball(bll); }
+    static void newRaketka(const Raketka & padd) { paddle = new Raketka(padd); }
     static bool Update(float deltaTime, BlocksField & blocksField);
     static void Draw(RenderWindow & window);
 };

@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Block.hpp"
-#include "GlobalObjects.hpp"
+#include "Settings.hpp"
 #include "Raketka.hpp"
 
 class Ball
@@ -21,7 +21,7 @@ public:
 
     bool checkColission(const Block & block);
     bool checkColission(const Raketka & paddle);
-    bool exist() { return bottom() < GlobalObjects::windowHeight; }
+    bool exist() { return bottom() < Settings::windowHeight; }
 
     void Update(float deltaTime);
 

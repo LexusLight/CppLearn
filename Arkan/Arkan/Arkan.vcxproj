@@ -122,7 +122,7 @@
     <ClCompile Include="..\scripts\Block.cpp" />
     <ClCompile Include="..\scripts\BlocksField.cpp" />
     <ClCompile Include="..\scripts\Game.cpp" />
-    <ClCompile Include="..\scripts\GlobalObjects.cpp" />
+    <ClCompile Include="..\scripts\Settings.cpp" />
     <ClCompile Include="..\scripts\main.cpp" />
     <ClCompile Include="..\scripts\Raketka.cpp" />
   </ItemGroup>
@@ -131,7 +131,7 @@
     <ClInclude Include="..\scripts\Block.hpp" />
     <ClInclude Include="..\scripts\BlocksField.hpp" />
     <ClInclude Include="..\scripts\Game.hpp" />
-    <ClInclude Include="..\scripts\GlobalObjects.hpp" />
+    <ClInclude Include="..\scripts\Settings.hpp" />
     <ClInclude Include="..\scripts\Raketka.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

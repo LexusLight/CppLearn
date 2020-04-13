@@ -116,7 +116,7 @@ void Ball::Update(float deltaTime)
     circle.move(velocity * deltaTime);
     if (left() <= 0.f)
         velocity.x = -velocity.x;
-    if (rigth() >= GlobalObjects::windowWidth)
+    if (rigth() >= Settings::windowWidth)
         velocity.x = -velocity.x;
     if (top() <= 0.f)
         velocity.y = -velocity.y;
