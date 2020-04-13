@@ -26,4 +26,4 @@ public:
     float bottom() const { return raketka.getPosition().y + raketka.getSize().y / 2.f; }
 };
 
-#endif // PADDLE_HPP_
+#endif

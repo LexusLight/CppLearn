@@ -1,4 +1,6 @@
 #include "Ball.hpp"
+#include "Settings.hpp"
+#include <iostream>
 
 using namespace sf;
 Ball::Ball(float radius, const Vector2f & position, const Color & color, float speed, float angle)
@@ -14,13 +16,14 @@ Ball::Ball(float radius, const Vector2f & position, const Color & color, float s
 
 void Ball::setAngle(float angle)
 {
-    velocity.x = speed * std::cos(angle * M_PI / 180);
-    velocity.y = -speed * std::sin(angle * M_PI / 180);
+    velocity.x = speed * std::cos(angle * PI / 180);
+    velocity.y = -speed * std::sin(angle * PI / 180);
 }
+
 float Ball::getAngle()
 {
     // angle in range [-180; 180]
-    float angle = std::atan2(-velocity.y, velocity.x) * 180 / M_PI;
+    float angle = std::atan2(-velocity.y, velocity.x) * 180 / PI;
     // angle in range [0; 360]
     if (angle < 0.f)
         angle += 360.f;
@@ -42,6 +45,7 @@ bool Ball::checkColission(const Block & block)
             {
                 velocity.y *= -1;
             }
+			Settings::score++;
             return true;
         }
     }
@@ -64,7 +68,7 @@ bool Ball::checkColission(const Block & block)
 
         float a = (-getY() + corner.y) / (getX() - corner.x);
         a = -1 / a;
-        float alpha = std::atan(a) * 180 / M_PI;
+        float alpha = std::atan(a) * 180 / PI;
         if (alpha < 0)
             alpha += 180;
         float beta = getAngle();
@@ -83,16 +87,15 @@ bool Ball::checkColission(const Block & block)
             angle = 8.f;
 
         setAngle(angle);
-
         return true;
     }
 
     return false;
 }
 
-bool Ball::checkColission(const Raketka & paddle)
+bool Ball::checkColission(const Raketka & raketka)
 {
-    if (left() < paddle.rigth() && rigth() > paddle.left() && top() < paddle.bottom() && bottom() >= paddle.top())
+    if (left() < raketka.rigth() && rigth() > raketka.left() && top() < raketka.bottom() && bottom() >= raketka.top())
     {
         /*float minAngle = 120.f, maxAngle = 60.f;
         float percantage = getX() - paddle.left() / paddle.getSize().x;
@@ -100,9 +103,9 @@ bool Ball::checkColission(const Raketka & paddle)
         setAngle(angle);*/
 
         float deviation = 50.f;
-        bool leftSide = getX() < paddle.getPosition().x;
-        float distanceFromCenter = std::abs(getX() - paddle.getPosition().x);
-        float percantage = distanceFromCenter / (paddle.getSize().x / 2.f);
+        bool leftSide = getX() < raketka.getPosition().x;
+        float distanceFromCenter = std::abs(getX() - raketka.getPosition().x);
+        float percantage = distanceFromCenter / (raketka.getSize().x / 2.f);
         float angle = 90.f - percantage * deviation * (leftSide ? -1.f : 1.f);
         setAngle(angle);
 
@@ -111,14 +114,14 @@ bool Ball::checkColission(const Raketka & paddle)
     return false;
 }
 
-void Ball::Update(float deltaTime)
+void Ball::Update(float deltaTime) //Отталкивание шарика и заскок за платформу
 {
     circle.move(velocity * deltaTime);
-    if (left() <= 0.f)
+    if (left() < 0.f + 2.f)
         velocity.x = -velocity.x;
-    if (rigth() >= Settings::windowWidth)
+    if (rigth() > Settings::windowWidth - 2.f)
         velocity.x = -velocity.x;
-    if (top() <= 0.f)
+    if (top() < 0.f + 2.f)
         velocity.y = -velocity.y;
 }
 

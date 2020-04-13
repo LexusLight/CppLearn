@@ -17,7 +17,10 @@ BlocksField::BlocksField(const Vector2f & size, const Vector2f & position, const
 
 void BlocksField::Update(Ball & ball)
 {
-    blocks.remove_if([&ball, this](const Block & block)->bool { return ball.checkColission(block); });
+    blocks.remove_if([&ball, this](const Block & block)->bool 
+	{
+		return ball.checkColission(block); 
+	});
 }
 
 void BlocksField::Draw(RenderWindow & window)

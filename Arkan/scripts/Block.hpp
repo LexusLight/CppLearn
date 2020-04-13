@@ -2,9 +2,8 @@
 #define BLOCK_HPP_
 
 #include <cmath>
-#define M_PI 3.14159265358979323846
-
 #include <SFML/Graphics.hpp>
+#define PI 3.14159265358979323846
 
 using namespace sf;
 class Block

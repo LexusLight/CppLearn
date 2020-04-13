@@ -13,9 +13,9 @@ Raketka::Raketka(const Vector2f & size, const Vector2f & position, const Color &
 
 void Raketka::Update(float deltaTime)
 {
-    if (Keyboard::isKeyPressed(Keyboard::Left) && raketka.getPosition().x > 0.f)
+    if (Keyboard::isKeyPressed(Keyboard::Left) && raketka.getPosition().x > 0.f + 50.f)
 		raketka.move(-speed * deltaTime, 0.f);
-    if (Keyboard::isKeyPressed(Keyboard::Right) && raketka.getPosition().x < Settings::windowWidth)
+    if (Keyboard::isKeyPressed(Keyboard::Right) && raketka.getPosition().x < Settings::windowWidth - 50.f)
 		raketka.move(speed * deltaTime, 0.f);
 }
 

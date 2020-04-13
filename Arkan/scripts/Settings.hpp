@@ -11,7 +11,7 @@ private:
 
 public:
     static const float windowWidth, windowHeight, speed;
-	static const int level, lifes;
+	static int score, level, lifes;
 	static RenderWindow window;
 };
 

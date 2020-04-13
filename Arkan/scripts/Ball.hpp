@@ -9,7 +9,7 @@
 class Ball
 {
 private:
-    sf::CircleShape circle;
+    
     float speed;
     sf::Vector2f velocity;
 
@@ -17,10 +17,11 @@ private:
     float getAngle();
 
 public:
+	sf::CircleShape circle;
     Ball(float radius, const sf::Vector2f & position, const sf::Color & color, float speed, float angle);
 
     bool checkColission(const Block & block);
-    bool checkColission(const Raketka & paddle);
+    bool checkColission(const Raketka & raketka);
     bool exist() { return bottom() < Settings::windowHeight; }
 
     void Update(float deltaTime);
@@ -37,6 +38,7 @@ public:
     sf::Vector2f getPosition() const { return circle.getPosition(); }
     float getRadius() const { return circle.getRadius(); }
     sf::Vector2f getVelocity() const {return velocity; }
+
 };
 
 #endif // BALL_HPP_
