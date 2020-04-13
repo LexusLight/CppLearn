@@ -127,12 +127,12 @@
     <ClCompile Include="..\scripts\Raketka.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\scripts\Ball.hpp" />
-    <ClInclude Include="..\scripts\Block.hpp" />
-    <ClInclude Include="..\scripts\BlocksField.hpp" />
-    <ClInclude Include="..\scripts\Game.hpp" />
-    <ClInclude Include="..\scripts\Settings.hpp" />
-    <ClInclude Include="..\scripts\Raketka.hpp" />
+    <ClInclude Include="..\scripts\Ball.h" />
+    <ClInclude Include="..\scripts\Block.h" />
+    <ClInclude Include="..\scripts\BlocksField.h" />
+    <ClInclude Include="..\scripts\Game.h" />
+    <ClInclude Include="..\scripts\Settings.h" />
+    <ClInclude Include="..\scripts\Raketka.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

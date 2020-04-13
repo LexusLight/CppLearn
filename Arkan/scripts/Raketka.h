@@ -1,8 +1,8 @@
-#ifndef RAKETKA_HPP_
-#define RAKETKA_HPP_
+#ifndef RAKETKA
+#define RAKETKA
 
 #include <SFML/Graphics.hpp>
-#include "Settings.hpp"
+#include "Settings.h"
 
 using namespace sf;
 class Raketka

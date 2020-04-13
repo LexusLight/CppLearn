@@ -1,5 +1,5 @@
-#ifndef BLOCK_HPP_
-#define BLOCK_HPP_
+#ifndef BLOCK
+#define BLOCK
 
 #include <cmath>
 #include <SFML/Graphics.hpp>
@@ -22,4 +22,4 @@ public:
     float bottom() const { return rect.getPosition().y + rect.getSize().y; }
 };
 
-#endif // BLOCK_HPP_
+#endif

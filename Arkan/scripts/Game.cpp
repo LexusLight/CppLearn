@@ -1,9 +1,10 @@
-#include "Game.hpp"
-#include "Settings.hpp"
+#include "Game.h"
+#include "Settings.h"
 #include <iostream>
 
 using namespace sf;
 
+// двойной указатель
 Ball * Game::ball = nullptr;
 Raketka * Game::raketka = nullptr;
 
@@ -19,12 +20,12 @@ bool Game::Update(float deltaTime, BlocksField & blocksField)
         ball->checkColission(*raketka);
         blocksField.Update(*ball);
         return true;
-	} if (ball->Ball::top() >= 560.f) 
+	} if (ball->Ball::top() >= 560.f) //Вычитаем жизнь  и возвращаем шарик на место при его пропуске
 	{
-		ball->circle.setPosition(raketka->getPosition().x, raketka->getPosition().y - 50.f);
+		ball->circle.setPosition(raketka->getPosition().x, raketka->getPosition().y - 50.f);  
 		Settings::lifes--;
 	}	
-    else
+    else //Условие при котором пропадает мячик и спавнится новый
     {
         delete ball;
         ball = nullptr;
@@ -33,7 +34,8 @@ bool Game::Update(float deltaTime, BlocksField & blocksField)
 }
 
 void Game::Draw(RenderWindow & window)
-{
+{ 
+	//Всё понятно
     if (ball != nullptr)
         ball->Draw(window);
     if (raketka != nullptr)

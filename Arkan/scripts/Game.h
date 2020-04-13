@@ -1,8 +1,8 @@
-#ifndef GAME_HPP_
-#define GAME_HPP_
+#ifndef GAME
+#define GAME
 
 #include <SFML/Graphics.hpp>
-#include "BlocksField.hpp"
+#include "BlocksField.h"
 
 using namespace sf;
 class Game
@@ -19,4 +19,4 @@ public:
     static void Draw(RenderWindow & window);
 };
 
-#endif // GAME_HPP_
+#endif

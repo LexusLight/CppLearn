@@ -1,10 +1,10 @@
-#ifndef BALL_HPP_
-#define BALL_HPP_
+#ifndef BALL
+#define BALL
 
 #include <SFML/Graphics.hpp>
-#include "Block.hpp"
-#include "Settings.hpp"
-#include "Raketka.hpp"
+#include "Block.h"
+#include "Settings.h"
+#include "Raketka.h"
 
 class Ball
 {
@@ -41,4 +41,4 @@ public:
 
 };
 
-#endif // BALL_HPP_
+#endif

@@ -1,5 +1,5 @@
-#include "Ball.hpp"
-#include "Settings.hpp"
+#include "Ball.h"
+#include "Settings.h"
 #include <iostream>
 
 using namespace sf;
@@ -30,7 +30,7 @@ float Ball::getAngle()
     return angle;
 }
 
-bool Ball::checkColission(const Block & block)
+bool Ball::checkColission(const Block & block) //Чекаем для блоков
 {
     if ( (getX() >= block.left() && getX() <= block.rigth()) ||
          (getY() >= block.top() && getY() <= block.bottom()) )
@@ -93,14 +93,10 @@ bool Ball::checkColission(const Block & block)
     return false;
 }
 
-bool Ball::checkColission(const Raketka & raketka)
+bool Ball::checkColission(const Raketka & raketka) //Чекаем для ракетки
 {
     if (left() < raketka.rigth() && rigth() > raketka.left() && top() < raketka.bottom() && bottom() >= raketka.top())
     {
-        /*float minAngle = 120.f, maxAngle = 60.f;
-        float percantage = getX() - paddle.left() / paddle.getSize().x;
-        float angle = minAngle - (minAngle - maxAngle) * percantage;
-        setAngle(angle);*/
 
         float deviation = 50.f;
         bool leftSide = getX() < raketka.getPosition().x;
@@ -114,7 +110,7 @@ bool Ball::checkColission(const Raketka & raketka)
     return false;
 }
 
-void Ball::Update(float deltaTime) //Отталкивание шарика и заскок за платформу
+void Ball::Update(float deltaTime) //Отталкивание шарика
 {
     circle.move(velocity * deltaTime);
     if (left() < 0.f + 2.f)

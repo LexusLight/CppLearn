@@ -1,5 +1,5 @@
-#ifndef SETTINGS_HPP_
-#define SETTINGS_HPP_
+#ifndef SETTINGS
+#define SETTINGS
 
 #include <SFML/Graphics.hpp>
 

@@ -1,8 +1,8 @@
-#ifndef BLOCKSFIELD_HPP_
-#define BLOCKSFIELD_HPP_
+#ifndef BLOCKSFIELD
+#define BLOCKSFIELD
 
 #include <list>
-#include "Ball.hpp"
+#include "Ball.h"
 
 using namespace sf;
 class BlocksField
@@ -18,4 +18,4 @@ public:
     void Draw(RenderWindow & window);
 };
 
-#endif // BLOCKSFIELD_HPP_
+#endif

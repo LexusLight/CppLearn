@@ -1,8 +1,9 @@
 #include <iostream>
-#include "BlocksField.hpp"
+#include "BlocksField.h"
 
 using namespace sf;
-BlocksField::BlocksField(const Vector2f & size, const Vector2f & position, const Color & color, int columns, int rows)
+//вводим аргумент == ширине поля, делим его на столбцы и в цикле совершаем множимые отступы, получаем поле.
+BlocksField::BlocksField(const Vector2f & size, const Vector2f & position, const Color & color, int columns, int rows) //Реализуем поле
 {
     Vector2f blockSize(size.x / columns, size.y / rows);
 
@@ -17,10 +18,8 @@ BlocksField::BlocksField(const Vector2f & size, const Vector2f & position, const
 
 void BlocksField::Update(Ball & ball)
 {
-    blocks.remove_if([&ball, this](const Block & block)->bool 
-	{
-		return ball.checkColission(block); 
-	});
+	//Вызывается лямбда выражение для проверки коллизий и если столкновения этого блока с шариком подтверждается
+    blocks.remove_if([&ball, this](const Block & block)->bool{return ball.checkColission(block); }); 
 }
 
 void BlocksField::Draw(RenderWindow & window)
